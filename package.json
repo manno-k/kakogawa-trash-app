@@ -23,6 +23,8 @@
     "npm": "^6.2.0",
     "sass-loader": "^7.0.3",
     "vue": "^2.5.2",
+    "vue-analytics": "^5.12.2",
+    "vue-head": "^2.0.12",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

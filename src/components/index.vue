@@ -4670,7 +4670,17 @@ export default {
       return str.charAt(0).toUpperCase() + str.slice(1)
     }
   },
-  methods: {}
+  methods: {},
+  head: {
+    meta: [
+      { name: 'description', content: '加古川市のゴミ分別が簡単に検索できるサイトです。燃えるゴミ・燃えないごみ・資源ごみなどがゴミの名前から検索することができます。' },
+      { property: 'og:title', content: '加古川ゴミ分別アプリ' },
+      { property: 'og:description', content: '加古川市のゴミ分別が簡単に検索できるサイトです。燃えるゴミ・燃えないごみ・資源ごみなどがゴミの名前から検索することができます。' },
+      { property: 'og:type', content: 'website' },
+      { property: 'og:url', content: 'https://awe-some.net/53410/' },
+      { name: 'twitter:card', content: 'summary' }
+    ]
+  }
 
 }
 </script>

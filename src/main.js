@@ -9,6 +9,15 @@ import BootstrapVue from 'bootstrap-vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import VueHead from 'vue-head'
+import VueAnalytics from 'vue-analytics' // ← 追加
+Vue.use(VueAnalytics, {
+  id: 'UA-79213651-5it',
+  router
+})
+Vue.use(VueHead, {
+  separator: ' | '
+})
 
 library.add(faArrowRight)
 
