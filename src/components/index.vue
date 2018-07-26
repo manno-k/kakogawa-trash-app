@@ -45,7 +45,7 @@ export default {
 
   data: function () {
     return {
-      searchQuery: '',
+    searchQuery: '',
       columns: ['item', 'type', 'desc'],
       /* eslint-disable no-new */
       data: [
@@ -4680,8 +4680,7 @@ export default {
       { property: 'og:url', content: 'https://awe-some.net/53410/' },
       { name: 'twitter:card', content: 'summary' }
     ]
-  }
-
+  },
 }
 </script>
 
