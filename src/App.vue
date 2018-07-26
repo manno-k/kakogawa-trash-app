@@ -20,8 +20,10 @@ export default {
 </script>
 
 <style>
+  @import "https://fonts.googleapis.com/earlyaccess/mplus1p.css";
+
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: "Mplus 1p", -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
