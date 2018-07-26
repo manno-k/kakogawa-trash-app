@@ -47,6 +47,7 @@ export default {
     return {
       searchQuery: '',
       columns: ['item', 'type', 'desc'],
+      /* eslint-disable no-new */
       data: [
         {
           "item": "アイスノン（保冷枕）",
