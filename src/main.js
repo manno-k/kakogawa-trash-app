@@ -8,7 +8,7 @@ import 'bootstrap/scss/bootstrap.scss'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import BootstrapVue from 'bootstrap-vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight,faCaretRight ,faWindowClose} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 import VueHead from 'vue-head'
@@ -17,7 +17,8 @@ Vue.use(VueHead, {
 })
 
 library.add(faArrowRight)
-
+library.add(faCaretRight)
+library.add(faWindowClose)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(BootstrapVue);

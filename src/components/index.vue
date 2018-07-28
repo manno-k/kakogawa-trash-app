@@ -7,24 +7,30 @@
       </form>
     </section>
     <section v-if="width < 769" v-cloak>
-      <div class="tabs" v-cloack>
+      <div class="list" v-cloack>
         <ul>
           <li v-for="(tab, index) in filteredData" :class="{'is-active': show == index}">
             <a @click.prevent="show = index">
+              <font-awesome-icon icon="caret-right" class="fa-fw"/>
               {{tab.item}}
             </a>
           </li>
         </ul>
       </div>
       <div v-cloack>
-        <transition-group name="fade-up" target="div" appear @click.native="navigate($event); alerts($event);">
-          <div  v-for="(tab, index) in filteredData" v-if="show == index" :key="index" class="modalCard">
-            <div v-for="(tab, index) in filteredData" v-if="show == index" :key="index" v-html="tab.item"></div>
-            <div v-for="(tab, index) in filteredData" v-if="show == index" :key="index" v-html="tab.type"></div>
-            <div v-for="(tab, index) in filteredData" v-if="show == index" :key="index" v-html="tab.desc"></div>
-            <div v-for="(tab, index) in data" v-if="show == index" :key="index" @click.prevent="show = 99999">閉じる</div>
+        <transition name="fade-up" @click.native="navigate($event); alerts($event);">
+          <div class="overlay"v-for="(tab, index) in filteredData" v-if="show == index" :key="index" @click.prevent="show = 99999">
+            <ul v-for="(tab, index) in filteredData" v-if="show == index" :key="index" class="modalCard">
+              <li></li>
+              <li v-for="(tab, index) in filteredData" v-if="show == index" :key="index" v-html="tab.item"></li>
+              <li v-for="(tab, index) in filteredData" v-if="show == index" :key="index" v-html="tab.type"></li>
+              <li v-for="(tab, index) in filteredData" v-if="show == index" :key="index" v-html="tab.desc"></li>
+              <li class="closeBtn" @click.prevent="show = 99999">
+                <font-awesome-icon icon="window-close" class="fa-fw"/>
+              </li>
+            </ul>
           </div>
-        </transition-group>
+        </transition>
       </div>
     </section>
     <section v-else>
@@ -68,24 +74,6 @@ export default {
   data: function () {
     return {
       show: 99999,
-      tabs: [
-        {
-          title: "Pictures",
-          content: "Pictures content"
-        },
-        {
-          title: "Music",
-          content: "Music content. Wanna see some <a href=\"#\" data-show=\"3\">Documents</a> content?"
-        },
-        {
-          title: "Videos",
-          content: "Videos content. <a href=\"#\" data-alert=\"VIDEOS!!!\">Alert videos</a>"
-        },
-        {
-          title: "Documents",
-          content: "Documents content. Wanna see some <a href=\"#\" data-show=\"1\">Music</a> content?"
-        },
-      ],
       width: window.innerWidth,
       searchQuery: '',
       columns: ['item', 'type', 'desc'],
@@ -147,9 +135,13 @@ export default {
 <style lang="scss" scoped>
   @import "~bootstrap/scss/bootstrap";
 
+  $blue: #b8daff;
+  $pink: #EDBCAE;
+  $green: #B8D8D9;
+
   form {
     input {
-      border: 1px solid #b8daff;
+      border: 1px solid $green;
       border-radius: 5px;
       max-width: 500px;
       height: 50px;
@@ -189,14 +181,60 @@ export default {
     }
   }
 
-  /* transaction */
+  .list {
+    ul {
+      padding: 0;
+      li {
+        cursor: pointer;
+        list-style: none;
+        text-align: left;
+        border-top: 1px solid $green;
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 1rem 0;
+          margin: -0.1rem 0;
+        }
+        &:hover {
+          background: $pink;
+        }
+      }
+    }
 
+  }
+
+  /* transaction */
+  .overlay{
+    background: rgba(255,255,255,.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height:100%;
+  }
   .modalCard {
-    background: #b8daff;
-    position: absolute;
+    background: $green;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 3rem;
+    width: 85%;
+    text-align: left;
+    li {
+      list-style: none;
+    }
+
+    .closeBtn {
+      color: white;
+      position: absolute;
+      top: 0;
+      right: 5px;
+      font-size: 1.5rem;
+    }
   }
 
   .fade-up-enter-active,
