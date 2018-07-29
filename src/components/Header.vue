@@ -34,7 +34,7 @@ export default {
     }
   }, watch: {
     fontSize: function (v) {
-      document.querySelector("table").style.fontSize = `${v * 2}px`
+      document.querySelector("body").style.fontSize = `${v * 2}px`
     }
   },
 }
