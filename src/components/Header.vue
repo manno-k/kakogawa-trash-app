@@ -15,13 +15,13 @@
       </div>
       <ul class="nav-right m-0 p-0">
         <li>
-          <router-link to="/">日</router-link>
+          <router-link to="/53410/">日</router-link>
         </li>
         <li>
-          <router-link to="/tw">繁</router-link>
+          <router-link to="/53410/tw">繁</router-link>
         </li>
         <li>
-          <router-link to="/cn">簡</router-link>
+          <router-link to="/53410/cn">簡</router-link>
         </li>
       </ul>
     </nav>

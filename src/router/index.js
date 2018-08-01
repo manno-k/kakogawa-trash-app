@@ -10,17 +10,17 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/53410',
       name: 'index',
       component: Index
     },
     {
-      path: '/cn',
+      path: '/53410/cn',
       name: 'Cn',
       component: Cn
     },
     {
-      path: '/tw',
+      path: '/53410/tw',
       name: 'Tw',
       component: Tw
     }
