@@ -11,16 +11,19 @@
     <nav class="container">
       <div class="nav-left">
         <h1><img src="@/assets/logo.png" alt="加古川ゴミ分別アプリ"></h1>
-        <h2 class="text-secondary">加古川市ゴミ分別アプリ</h2>
+        <h2 class="text-secondary">{{title}}</h2>
       </div>
-      <!--<ul class="nav-right m-0 p-0">-->
-      <!--<li>-->
-      <!--<router-link to="/">日本語</router-link>-->
-      <!--</li>-->
-      <!--<li>-->
-      <!--<router-link to="/cn">中国語</router-link>-->
-      <!--</li>-->
-      <!--</ul>-->
+      <ul class="nav-right m-0 p-0">
+        <li>
+          <router-link to="/">日</router-link>
+        </li>
+        <li>
+          <router-link to="/tw">繁</router-link>
+        </li>
+        <li>
+          <router-link to="/cn">簡</router-link>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -30,6 +33,7 @@ export default {
   name: 'App',
   data () {
     return {
+      title: '加古川ゴミ分別アプリ',
       fontSize: 10,
     }
   }, watch: {
@@ -43,7 +47,7 @@ export default {
 <style lang="scss" scoped>
   @import "~bootstrap/scss/bootstrap";
 
-  .fontsize{
+  .fontsize {
     position: relative;
     width: 100%;
     text-align: right;

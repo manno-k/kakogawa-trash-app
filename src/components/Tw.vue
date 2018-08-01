@@ -42,13 +42,13 @@
           <thead class="table-primary">
           <tr>
             <th>
-              垃圾种类
+              垃圾種類
             </th>
             <th>
-              分类
+              分類
             </th>
             <th>
-              条件
+              條件
             </th>
           </tr>
           </thead>
@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import Json from "@/list_cn.json";
+import Json from "@/list_tw.json";
 
 export default {
   name: 'Index',
@@ -120,7 +120,7 @@ export default {
   head: {
     meta: [
       {name: 'description', content: '加古川市のゴミ分別が簡単に検索できるサイトです。燃えるゴミ・燃えないごみ・資源ごみなどがゴミの名前から検索することができます。'},
-      {property: 'og:title', content: '加古川垃圾分类表'},
+      {property: 'og:title', content: '加古川垃圾分類表'},
       {property: 'og:description', content: '加古川市のゴミ分別が簡単に検索できるサイトです。燃えるゴミ・燃えないごみ・資源ごみなどがゴミの名前から検索することができます。'},
       {property: 'og:type', content: 'website'},
       {property: 'og:url', content: 'https://awe-some.net/53410/'},

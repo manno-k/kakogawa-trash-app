@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header/>
-    <router-view/>
+    <transition appear>
+      <router-view/>
+    </transition>
     <Footer/>
   </div>
 </template>
@@ -28,5 +30,20 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+  }
+  .v-enter-active,
+  .v-leave-active, .v-move {
+    transition:2s;
+  }
+  .v-enter {
+    /*position: absolute;*/
+    top: 0;
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  .v-leave-to {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(500px);
   }
 </style>
