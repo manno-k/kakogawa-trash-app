@@ -7,6 +7,7 @@ import Tw from '@/components/Tw'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
