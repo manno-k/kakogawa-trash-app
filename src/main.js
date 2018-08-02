@@ -10,11 +10,13 @@ import BootstrapVue from 'bootstrap-vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faArrowRight,faCaretRight ,faWindowClose} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import history from 'connect-history-api-fallback';
 
 import VueHead from 'vue-head'
 Vue.use(VueHead, {
   separator: ' | '
 })
+
 
 library.add(faArrowRight)
 library.add(faCaretRight)
@@ -22,6 +24,7 @@ library.add(faWindowClose)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.use(BootstrapVue);
+Vue.use(history);
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
